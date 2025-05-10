@@ -16,7 +16,7 @@ You can try the app live here: [Streamlit Cloud Link](southindianmedicinalherbcl
 
 ## 🖼️ Screenshot
 
-![App Screenshot](WEB PAGE.png)
+[App Screenshot](WEBPAGE.png)
 
 ## 🛠 How to Run Locally
 
