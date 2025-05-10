@@ -12,11 +12,11 @@ This is an AI-powered web app built with **Streamlit** that helps identify **Sou
 
 ## 🚀 Demo
 
-You can try the app live here: [Streamlit Cloud Link](https://your-streamlit-app-link) *(replace with your link after deployment)*
+You can try the app live here: [Streamlit Cloud Link](southindianmedicinalherbclassifier-ikyq8fpqxf3ztn4394cjsp.streamlit.app) *(replace with your link after deployment)*
 
 ## 🖼️ Screenshot
 
-![App Screenshot](ChatGPT_Logo.png)
+![App Screenshot](MY_LOGO.png)
 
 ## 🛠 How to Run Locally
 
