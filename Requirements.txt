@@ -1,9 +1,6 @@
-streamlit
-pandas
-numpy
 scikit-learn
+pandas
+streamlit
+numpy
 reportlab
-
-git add requirements.txt
-git commit -m "Add missing dependency: scikit-learn"
-git push origin main
+scikit-learn
