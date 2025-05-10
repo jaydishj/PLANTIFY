@@ -22,5 +22,6 @@ You can try the app live here: [Streamlit Cloud Link](southindianmedicinalherbcl
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   [git clone https://github.com/your-username/your-repo-name.git
    cd your-repo-name
+(https://github.com/jaydishj/South_indian_medicinal_herb_classifier.git)
