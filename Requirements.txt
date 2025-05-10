@@ -3,3 +3,7 @@ pandas
 numpy
 scikit-learn
 reportlab
+
+git add requirements.txt
+git commit -m "Add missing dependency: scikit-learn"
+git push origin main
