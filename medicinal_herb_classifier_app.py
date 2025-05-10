@@ -25,7 +25,7 @@ def get_base64_image(file_path):
         return "https://via.placeholder.com/30"
 
 # Define logo path and encode it at the top to ensure it's available
-logo_path = "c:/Users/Admin/Downloads/ChatGPT Image Apr 4, 2025, 03_01_29 PM (2).png"
+logo_path = "MY_LOGO.png"
 logo_base64 = get_base64_image(logo_path)
 
 # Expanded dataset with 100 South Indian medicinal herbs
