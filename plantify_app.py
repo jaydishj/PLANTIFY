@@ -11,6 +11,58 @@ from io import BytesIO
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
+
+# Streamlit app
+st.set_page_config(page_title="South Indian Medicinal Herb Classifier", page_icon="🌿", layout="wide")
+st.markdown("""
+<style>
+/* Fade-in animation for welcome page */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Slide-in animation for classification inputs */
+@keyframes slideIn {
+    0% { transform: translateX(-100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.slide-in {
+    animation: slideIn 0.8s ease-in-out;
+}
+
+/* Button hover effect */
+.stButton > button {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.stSelectbox select { font-size: 16px; }
+.stTextInput > div > input { font-size: 16px; }
+.reportview-container { background: linear-gradient(to bottom, #e6f3e6, #ffffff); }
+.sidebar .sidebar-content { background-color: #f0f8f0; }
+
+/* Center logo and name in footer */
+.footer-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # Function to load and encode the logo as base64
 def get_base64_image(file_path):
     try:
@@ -25,7 +77,7 @@ def get_base64_image(file_path):
         return "https://via.placeholder.com/30"
 
 # Define logo path and encode it at the top to ensure it's available
-logo_path = "E:/MY_LOGO.png"
+logo_path = "MY_LOGO.png"
 logo_base64 = get_base64_image(logo_path)
 
 # Expanded dataset with 100 South Indian medicinal herbs
@@ -254,56 +306,7 @@ kf = KFold(n_splits=5, shuffle=True, random_state=42)
 scores = cross_val_score(clf, df_encoded, df["species"], cv=kf)
 model_accuracy = np.mean(scores) * 100
 
-# Streamlit app
-st.set_page_config(page_title="South Indian Medicinal Herb Classifier", page_icon="🌿", layout="wide")
-st.markdown("""
-<style>
-/* Fade-in animation for welcome page */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
 
-/* Slide-in animation for classification inputs */
-@keyframes slideIn {
-    0% { transform: translateX(-100px); opacity: 0; }
-    100% { transform: translateX(0); opacity: 1; }
-}
-
-.fade-in {
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.slide-in {
-    animation: slideIn 0.8s ease-in-out;
-}
-
-/* Button hover effect */
-.stButton > button {
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.stButton > button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-.stSelectbox select { font-size: 16px; }
-.stTextInput > div > input { font-size: 16px; }
-.reportview-container { background: linear-gradient(to bottom, #e6f3e6, #ffffff); }
-.sidebar .sidebar-content { background-color: #f0f8f0; }
-
-/* Center logo and name in footer */
-.footer-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-</style>
-""", unsafe_allow_html=True)
 
 # Sidebar navigation with session state
 if "selected_page" not in st.session_state:
