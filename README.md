@@ -1,4 +1,4 @@
-# 🌿 South Indian Medicinal Herb Classifier
+# 🌿 PLANTIFY
 
 This is an AI-powered web app built with **Streamlit** that helps identify **South Indian medicinal herbs** based on morphological characteristics like leaf shape, flower symmetry, and more.
 
